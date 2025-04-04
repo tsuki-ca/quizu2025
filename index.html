@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="homeScreen" class="screen active">
+        <h1>ステージ選択</h1>
+
+        <p>現代社会における問題解決力を身に付けよう！</p>
+
+        <div id="stageButtons"></div>
+
+        <div id="stagename">
+            <p>１　　　貧困編　　　　　　　　　　　　　２　　　教育編　　　</p>    
+            <p>３　　　人権編　　　　　　　　　　　　　４　　　防災編　　　</p>
+            <p>５　　　医療編　　　　　　　　　　　　　６　　　人口編　　　</p>
+            <p>７　　　環境編　　　　　　　　　　　　　　　　　　　　　　　</p>
+        </div>
+    </div>
+
+    <div id="quizScreen" class="screen">
+        <h1 id="stageTitle"></h1>
+        
+        <div id="questionContainer">
+            <p id="questionText"><strong>問題：</strong></p>
+            <div id="choices"></div>
+        </div>
+
+        <button onclick="goHome()">ホームに戻る</button>              
+
+        <p>タイマー: <span id="timer">15</span>S</p>                      
+
+        <p id="explanationMessage"></p>
+
+        <p id="resultMessage"></p>
+        
+        <div class="health-container">
+            <div class="health-box">
+                <p>敵体力: <span id="enemyHealthText">5</span></p>
+                <div class="health-bar"><div id="enemyHealth" class="health"></div></div>
+            </div>
+            <div class="health-box">
+                <p>プレイヤー体力: <span id="playerHealthText">5</span></p>
+                <div class="health-bar"><div id="playerHealth" class="health"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
